@@ -1,0 +1,27 @@
+{
+  "browsers": "chromium:headless",
+  "src": "/tests/*.spec.ts",
+  "skipJsErrors": true,
+  "assertionTimeout": 30000,
+  "pageLoadTimeout": 30000,
+    "quarantineMode": {
+    "attemptLimit": 3,
+    "successThreshold": 1
+  },
+
+  "reporter": [
+    {
+      "name": "spec"
+    },
+    {
+      "name": "xunit",
+      "output": "./testresults/testresult.xml"
+    }
+  ],
+  "videoPath": "./videos",
+  
+      "videoOptions": {
+        "failedOnly": true
+    }
+
+}
